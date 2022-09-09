@@ -104,11 +104,11 @@ def exe5(leds, sw):
         led[0].next = sw[0]
         led[1].next = (sw[0] and sw[1])
         led[2].next = not sw[0]
-        led[3].next = (sw[0] == sw[1])
+        led[3].next = (sw[0] != sw[1])
 
         for i in range(4, 7):
             led[i].next = True
-            
+
     return instances()
 
 
